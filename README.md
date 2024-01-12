@@ -21,23 +21,22 @@ Welcome to Open Food Recipe, an open-source food recipe app where users can regi
 
 1. Clone the repository:
    git clone https://github.com/your-username/open-food-recipe.git
-   then
-   cd myapp
+   
+2. cd myapp
 
 3. Set up a virtual environment (optional but recommended):
    python -m venv venv
    source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
-
-4. Install dependencies:
+then,   Install dependencies:
 pip install -r requirements.txt
 
-6.Run migrations:
+4.Run migrations:
 python manage.py migrate
 
-7.Start the development server:
+5.Start the development server:
 python manage.py runserver
 
-8. Visit http://localhost:8000/ in your browser to explore the app.
+6. Visit http://localhost:8000/ in your browser to explore the app.
 
 * Contributing
 If you'd like to contribute to the project, please follow the contribution guidelines.
