@@ -1,0 +1,35 @@
+<!-- recipe_form.html -->
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Add a New Recipe</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Recipe Name -->
+        <label for="id_recipe_name">Recipe Name:</label>
+        <input type="text" id="id_recipe_name" name="recipe_name" required>
+
+        <!-- Description -->
+        <label for="id_description">Description:</label>
+        <textarea id="id_description" name="description" required></textarea>
+
+        <!-- Image -->
+        <label for="id_image">Image:</label>
+        <input type="file" id="id_image" name="image" accept="image/*" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

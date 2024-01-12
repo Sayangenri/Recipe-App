@@ -1,0 +1,54 @@
+<!-- recipe_form.html -->
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'work.css' %}">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe Table</title>
+    </head>
+    <body>
+    <div class="container">
+        <h2>Recipe Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rec_data in rec_data %}
+                <tr>
+                    <td>{{rec_data.recipe_name}}</td>
+                    <td>{{rec_data.description}}</td>
+                    <td><img src="/images/{{rec_data.image}}"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    </body>
+    </html>
+    <div class="but_container">
+    <button onclick="redirectToAnotherPage()">Contribute Recipe</button>
+</div>
+</div>
+
+<script>
+    function redirectToAnotherPage() {
+        window.location.href = "recipe/contribute"; // Replace with the actual URL
+    }
+</script>
+
